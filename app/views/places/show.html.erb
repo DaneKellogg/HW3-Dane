@@ -1,6 +1,6 @@
 <h1> <%= @place.name %> </h1>
 
-<h2>Activities</h2>
+<h2>Post</h2>
     <ul>
         <% for post in @place.posts%>
             <h3> <%= post.title %> </h3>
@@ -10,10 +10,10 @@
     </ul>
 
 
-<a href="/posts/new?place_id=<%=@place.id%>"> Add an activity</a>
+<a href="/posts/newpost?place_id=<%=@place.id%>"> Add a post</a>
 
 <em>
-    <%= button_to "Delete Destination", @place, method: :delete%>
+    <%= button_to "Delete place", @place, method: :delete%>
 </em>
 
-<button type="button"><a href="/places"> Back to destinations list</a>
+<button type="button"><a href="/places"> Back to all places</a>

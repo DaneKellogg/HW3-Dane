@@ -1,13 +1,13 @@
 class PlacesController < ApplicationController
     def index
-        @places = 
+        @places = Place.all
     end
 
-    def place
+    def show
         @place = Place.find(params["id"])
     end
 
-    def newplace
+    def new
         @place = Place.new
     end
 
@@ -25,4 +25,3 @@ class PlacesController < ApplicationController
 
 end
 
-end
