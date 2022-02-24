@@ -1,7 +1,13 @@
 class PostsController < ApplicationController
 
-    def post
+   def show
+    @post = Post.find(params["place_id"])
+   end
+   
+    def new
         @post = Post.new
+        @place = Place.find(params["place_id"])
+
         @post.place_id = params["place_id"]
     end
 
